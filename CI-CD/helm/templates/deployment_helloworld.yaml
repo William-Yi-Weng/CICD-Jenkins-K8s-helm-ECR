@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: jobhandler
-          image: {{.Values.image.repoURL}}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
+          image: {{.Values.image.ECRLink}}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
           workingDir: /home/
           command: ["/bin/sh"]
           args: ["./startup.sh"]
