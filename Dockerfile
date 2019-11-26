@@ -19,7 +19,7 @@ RUN apt-get update -y && \
   apt-get install openjdk-11-jre-headless -y &&
 
 # Add java files
-ADD HelloWorld,java /home
+ADD code/HelloWorld.java /home
 ADD startup.sh
 RUN chown -R admin:admin /home
 
