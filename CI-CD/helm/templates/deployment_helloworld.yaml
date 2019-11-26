@@ -1,0 +1,24 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: helloworld-deployment
+spec:
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: helloworld.app
+        tier: backend
+    spec:
+      containers:
+        - name: jobhandler
+          image: {{.Values.image.repoURL}}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
+          workingDir: /home/
+          command: ["/bin/sh"]
+          args: ["./startup.sh"]
+      restartPolicy: Always
