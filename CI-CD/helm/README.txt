@@ -14,4 +14,4 @@ It will pass ECR repo ImageName and ECR ImageTag from value.yaml to deployment_h
 - templates/deployment_helloworld.yaml    # A kubernetes deployment file for helloworld.
 
 
-e.g.  /usr/local/bin/helm install --name=helloworld --namespace=default ./ --set image.repository=helloworld.k8s.java.repo --set image.tag=12nwi3i4i5j6j6j4j3k --set namespace=default
+e.g.  /usr/local/bin/helm install --name=helloworld --namespace=default ./ --set image.ERCLink=https://012345012345.dkr.ecr.us-east-1.amazonaws.com  --set image.repository=helloworld.k8s.java.repo --set image.tag=12nwi3i4i5j6j6j4j3k --set namespace=default
