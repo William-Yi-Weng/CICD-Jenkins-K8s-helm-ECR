@@ -1,7 +1,8 @@
 # This is a YAML-formatted file.
-# Declare variables to be passed into deployment_jobhandler.yaml in templates directory.
+# Declare variables to be passed into deployment_helloworld.yaml in templates directory.
 
 image:
+  repoURL: NULL
   repository: NULL
   tag: NULL
   pullPolicy: IfNotPresent
