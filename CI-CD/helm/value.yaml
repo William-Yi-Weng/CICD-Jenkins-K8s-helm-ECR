@@ -1,0 +1,17 @@
+# This is a YAML-formatted file.
+# Declare variables to be passed into deployment_jobhandler.yaml in templates directory.
+
+image:
+  repository: NULL
+  tag: NULL
+  pullPolicy: IfNotPresent
+
+args: []
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
