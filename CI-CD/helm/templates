@@ -1,0 +1,1 @@
+It will pass ECR repo-{{ .Values.image.repository }} and ECR image tag-{{ .Values.image.tag }} from value.yaml to deployment_helloworld.yaml
