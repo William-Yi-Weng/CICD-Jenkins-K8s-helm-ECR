@@ -6,7 +6,7 @@ public class HelloWorld
 	{
 		// TODO change the string to what you like!
 
-		System.out.println("Hello World will!");
+		System.out.println("Hello World!");
 	}
 
 }
