@@ -19,3 +19,5 @@
     - name: Update App
       command: "/usr/local/bin/helm upgrade --wait --recreate-pods --namespace={{ Namespace }} --set image.ECRLink={{ ECRLink }} --set image.repository={{ ImageName }} --set image.tag={{ imageTag }} --set namespace={{ Namespace }} HelloWorld ../helm"
       delegate_to: localhost
+      ignore_errors: yes
+
