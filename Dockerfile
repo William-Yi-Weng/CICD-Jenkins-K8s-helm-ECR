@@ -16,11 +16,11 @@ RUN if getent group admin ; then groupdel admin; fi &&\
 
 # Install dependencies
 RUN apt-get update -y && \
-  apt-get install openjdk-11-jre-headless -y &&
+  apt-get install openjdk-11-jre-headless -y
 
 # Add java files
 ADD code/HelloWorld.java /home
-ADD startup.sh
+ADD startup.sh /home
 RUN chown -R admin:admin /home
 
 # Set USER variable
