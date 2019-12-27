@@ -1,7 +1,7 @@
 node {
     def Namespace = "default"
     def ImageName = "helloworld.k8s.java.repo"
-    def ECRLink = "https://012345012345.dkr.ecr.us-east-1.amazonaws.com"
+    def ECRLink = "https://575516539389.dkr.ecr.ap-southeast-2.amazonaws.com/test"
 
     stage ('checkout'){
         final scmVars = checkout(scm)
@@ -13,7 +13,7 @@ node {
             docker.build("${ImageName}:latest")
         }
             
-        docker.withRegistry("${ECRLink}", 'ecr:us-east-1:aws_access_id'){
+        docker.withRegistry("${ECRLink}", 'ecr:ap-southeast-2:aws_access_id'){
             docker.image("${ImageName}").push("${ImageTag}")
         }
      }
