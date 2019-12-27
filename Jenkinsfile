@@ -1,6 +1,6 @@
 node {
     def Namespace = "default"
-    def ImageName = "test"
+    def ImageName = "helloworld.k8s.java.repo"
     def ECRLink = "https://575516539389.dkr.ecr.ap-southeast-2.amazonaws.com"
 
     stage ('checkout'){
