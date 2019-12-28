@@ -16,7 +16,7 @@ spec:
         tier: backend
     spec:
       containers:
-        - name: jobhandler
+        - name: helloworld
           image: {{.Values.image.ECRLink}}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
           workingDir: /home/
           command: ["/bin/sh"]
