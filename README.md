@@ -26,8 +26,8 @@ It will pass ECR repo ImageName and ECR ImageTag from value.yaml to deployment_h
 ### Stage1: Checkout
 Jenkins pipeline checks out the merge of branches from Github hook and stores the code into working file. And  it passes the image tag from checkout to the following stages.
 
-### Stage1: Docker Build
+### Stage2: Docker Build
 Docker builds a new image with updated code and push it into AWS ECR .
 
-### Stage1: Deploy in k8s with Helm
+### Stage3: Deploy in k8s with Helm
 Use Ansible to call Helm chart to deploy the image which contains the code of helloworld from AWS ECR into Kubernetes pods.
