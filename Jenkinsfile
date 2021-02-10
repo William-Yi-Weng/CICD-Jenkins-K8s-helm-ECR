@@ -1,7 +1,7 @@
 node {
     def Namespace = "default"
     def ImageName = "helloworld.k8s.java.repo"
-    def ECRLink = "https://575516539389.dkr.ecr.ap-southeast-2.amazonaws.com"
+    def ECRLink = "https://xxxxxxxxxxxxx.dkr.ecr.ap-southeast-2.amazonaws.com"
 
     stage ('checkout'){
         final scmVars = checkout(scm)
